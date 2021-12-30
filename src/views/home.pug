@@ -11,14 +11,20 @@ html(lang="en")
       h1 Noom
     main
       div#welcome
-        form 
-          input(type="text", placeholder="room name", required)
-          button Enter Room
+        form#name
+          input(type="text", placeholder="닉네임을 입력하세요.", required)
+          p
+          button 저장
+        form#join
+          input(type="text", placeholder="방 이름을 입력하세요.", required)
+          button 입장
+        h4 열린 채팅방: 
+        ul
       div#room 
         h3 
         ul 
-        form
-          input(type="text", placeholder="message", required)
-          button Send
+        form#msg
+          input(type="text", placeholder="보낼 메세지를 입력하세요.", required)
+          button 보내기
     script(src="/socket.io/socket.io.js") 
     script(src="/public/app.js") 
